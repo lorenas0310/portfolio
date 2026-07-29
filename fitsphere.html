@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FitSphereVR — Lorena Sostar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="logo"><a href="index.html">Lorena Sostar</a></div>
+    <nav>
+      <ul>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap case-hero">
+    <a href="index.html#work" class="back-link">← All work</a>
+    <div class="case-eyebrow">03 — VR Fitness / University Thesis</div>
+    <h1 class="case-title">FitSphereVR</h1>
+    <p class="case-tagline">A virtual reality fitness app designed end-to-end as my university thesis project — from user survey to usability testing with a real VR headset.</p>
+
+    <div class="case-meta">
+      <div class="meta-item">
+        <div class="meta-label">Role</div>
+        <div class="meta-value">Solo — research through usability testing</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Method</div>
+        <div class="meta-value">Survey, personas, IA, wireframes, prototype, testing</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Platform</div>
+        <div class="meta-value">Mobile + VR headset, web dashboard</div>
+      </div>
+    </div>
+
+    <div class="case-block">
+      <h3>Summary</h3>
+      <p>This was the practical part of my thesis, <em>"UX/UI Design for Virtual Reality Applications."</em> Rather than design in the abstract, I built and tested a real product concept: FitSphereVR, a VR fitness app that lets people train — cardio, strength, yoga, pilates and more — from home, wearing a simple headset like a VR Shinecon or Quest.</p>
+    </div>
+
+    <div class="case-block">
+      <h3>The problem</h3>
+      <p>VR fitness content already existed, but almost none of it had been validated with real people — most projects stopped at polished mockups, never tested against someone actually wearing a headset and trying to complete a workout unaided. Design decisions in VR are easy to get wrong in ways a flat screen mockup won't reveal.</p>
+    </div>
+
+    <div class="hmw">
+      <div class="hmw-eyebrow">How might we</div>
+      <p class="hmw-question">prove a VR fitness app is genuinely usable — not just visually complete — before calling the design finished?</p>
+    </div>
+
+    <div class="case-block">
+      <h3>Research first</h3>
+      <p>I ran a structured survey to understand what people actually wanted from a VR fitness product — preferences, workout habits, and pain points with existing tools. That data shaped everything downstream: two core user groups emerged (beginners and casual exercisers who needed guided, low-pressure routines; and fitness enthusiasts who wanted variety and challenge), which I translated into four detailed personas with their own goals and user stories.</p>
+    </div>
+
+    <div class="case-block">
+      <h3>From structure to screens</h3>
+      <ul>
+        <li>Defined the information architecture around four pillars: Home, Exercises, Community, Profile — each mapped to a concrete user need rather than a generic app template</li>
+        <li>Home surfaces weekly stats, trending workouts, monthly challenges and quick tips — so a user's first screen always answers "what should I do today?"</li>
+        <li>Exercises organizes by category (cardio, strength, yoga, pilates, arms, legs, full body...) with instructional video libraries per category</li>
+        <li>Community adds a friend activity feed, a leaderboard, and scheduled group classes — turning solo workouts into something social</li>
+        <li>Profile aggregates lifetime stats, a calorie chart, earned medals, and favorited workouts</li>
+        <li>Wireframed every flow before touching visual design, to validate structure and usability independent of aesthetics</li>
+      </ul>
+    </div>
+
+    <div class="case-block">
+      <h3>Visual direction</h3>
+      <p>A dark theme throughout — easier on the eyes in a headset, and visually calmer for something worn close to the face for extended periods — with a vivid green reserved for primary actions and progress, so it reads instantly against the near-black surface.</p>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="swatch-color" style="background:#0A0A0A;"></div>
+          <div class="swatch-name">Background</div>
+          <div class="swatch-hex">#0A0A0A</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#1DB954;"></div>
+          <div class="swatch-name">Action green</div>
+          <div class="swatch-hex">#1DB954</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#20494F;"></div>
+          <div class="swatch-name">Card teal</div>
+          <div class="swatch-hex">#20494F</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#FFFFFF; border-color:#333;"></div>
+          <div class="swatch-name">Text</div>
+          <div class="swatch-hex">#FFFFFF</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mosaic-label">Onboarding &amp; entering VR</div>
+    <div class="shot">
+      <img src="mockups/fitsphere/onboarding.png" alt="Splash, login, device select and device connected screens" onclick="openLightbox('mockups/fitsphere/onboarding.png')">
+      <p class="shot-caption">Onboarding flow</p>
+    </div>
+
+    <div class="case-block">
+      <h3>Account &amp; profile setup</h3>
+      <p>Alongside the VR pairing flow, the mobile app carries standard account management — editing personal details and adjusting privacy, notification, and data preferences — so the profile feeding into personas and progress tracking is something the user actually controls.</p>
+    </div>
+
+    <div class="mosaic-label">Account, edit profile &amp; mobile home</div>
+    <div class="shot">
+      <img src="mockups/fitsphere/mobile-profile.png" alt="Account settings, edit profile and mobile home screens" onclick="openLightbox('mockups/fitsphere/mobile-profile.png')">
+      <p class="shot-caption">Account &amp; profile</p>
+    </div>
+
+    <div class="case-block" style="margin-top:36px; padding:24px 28px; border:1px solid var(--line); border-radius:8px; background:rgba(181,101,74,0.06);">
+      <h3 style="margin-bottom:10px;">Try the live VR prototype</h3>
+      <p style="margin-bottom:14px;">Open this on your phone, then place the phone inside a VR headset to view the experience in 3D:</p>
+      <a href="https://app.draftxr.com/vr/dh1PJV" target="_blank" rel="noopener" style="font-size:16px;">app.draftxr.com/vr/dh1PJV →</a>
+    </div>
+
+    <div class="mosaic-label">Landing &amp; home dashboard</div>
+    <div class="shot">
+      <img src="mockups/fitsphere/landing.png" alt="Marketing landing page" onclick="openLightbox('mockups/fitsphere/landing.png')">
+      <p class="shot-caption">Landing page</p>
+    </div>
+    <div class="shot">
+      <img src="mockups/fitsphere/home-welcome.png" alt="Web dashboard home with popular workouts" onclick="openLightbox('mockups/fitsphere/home-welcome.png')">
+      <p class="shot-caption">Popular workouts</p>
+    </div>
+    <div class="shot">
+      <img src="mockups/fitsphere/home-tips.png" alt="Monthly challenges and tips section" onclick="openLightbox('mockups/fitsphere/home-tips.png')">
+      <p class="shot-caption">Challenges &amp; tips</p>
+    </div>
+    <div class="shot">
+      <img src="mockups/fitsphere/program-detail.png" alt="30-day program detail with calendar" onclick="openLightbox('mockups/fitsphere/program-detail.png')">
+      <p class="shot-caption">Program &amp; calendar</p>
+    </div>
+    <div class="shot">
+      <img src="mockups/fitsphere/program-progress.png" alt="Program progress tracked day-by-day" onclick="openLightbox('mockups/fitsphere/program-progress.png')">
+      <p class="shot-caption">Daily progress</p>
+    </div>
+
+    <div class="mosaic-label">Exercises &amp; community</div>
+    <div class="shot">
+      <img src="mockups/fitsphere/exercises.png" alt="Exercise category grid" onclick="openLightbox('mockups/fitsphere/exercises.png')">
+      <p class="shot-caption">Exercise categories</p>
+    </div>
+    <div class="shot">
+      <img src="mockups/fitsphere/community-feed.png" alt="Friend activity feed" onclick="openLightbox('mockups/fitsphere/community-feed.png')">
+      <p class="shot-caption">Friend activity feed</p>
+    </div>
+    <div class="shot">
+      <img src="mockups/fitsphere/leaderboard.png" alt="Leaderboard rankings" onclick="openLightbox('mockups/fitsphere/leaderboard.png')">
+      <p class="shot-caption">Leaderboard</p>
+    </div>
+    <div class="shot">
+      <img src="mockups/fitsphere/group-classes.png" alt="Scheduled group classes" onclick="openLightbox('mockups/fitsphere/group-classes.png')">
+      <p class="shot-caption">Group classes</p>
+    </div>
+    <div class="shot">
+      <img src="mockups/fitsphere/profile-stats.png" alt="Profile stats and calorie chart" onclick="openLightbox('mockups/fitsphere/profile-stats.png')">
+      <p class="shot-caption">Profile</p>
+    </div>
+    <div class="shot">
+      <img src="mockups/fitsphere/profile-medals.png" alt="Earned medals and favorite activities" onclick="openLightbox('mockups/fitsphere/profile-medals.png')">
+      <p class="shot-caption">Medals &amp; favorites</p>
+    </div>
+
+    <div class="case-block">
+      <h3>Usability testing — with the actual headset</h3>
+      <p>I recruited five participants and put them through eleven task-based scenarios — from registering and logging in, to starting a cardio workout, finding a popular class, and tracking progress. Each session ran from my own home on a schedule, using a VR Shinecon headset: participants first walked through the mobile prototype, then put the phone into the headset to experience the flow in VR itself, with think-aloud interviews immediately after each task.</p>
+      <p>Across the eleven scenarios, every participant completed core tasks — registration, login, starting a workout, joining a popular class — on the first attempt, with no significant confusion. That result validated the information architecture and navigation decisions made much earlier, back at the wireframe stage.</p>
+    </div>
+
+    <div class="case-block">
+      <h3>Outcome</h3>
+      <p>FitSphereVR became a full case study in taking UX seriously for an emerging medium: a product built on real survey data, shaped by personas and user stories, structured through deliberate information architecture, and validated with actual users in an actual headset — not just assumed to work because it looked right on a screen.</p>
+    </div>
+    <div class="case-block" style="padding-top:80px; border-top:1px solid var(--line); margin-top:20px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px;">
+      <a href="msalesrep.html" class="back-link" style="margin-bottom:0;">← Previous project: mSalesRep</a>
+      <a href="techapp.html" class="back-link" style="margin-bottom:0;">Next project: TechApp →</a>
+    </div>
+  </div>
+</main>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close">Close ✕</span>
+  <img id="lightbox-img" src="" alt="Full screenshot">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

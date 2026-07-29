@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mBlagajna — Lorena Sostar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="logo"><a href="index.html">Lorena Sostar</a></div>
+    <nav>
+      <ul>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap case-hero">
+    <a href="index.html#work" class="back-link">← All work</a>
+    <div class="case-eyebrow">01 — Mobile POS / Port Authority</div>
+    <h1 class="case-title">mBlagajna</h1>
+    <p class="case-tagline">A mobile point-of-sale for port authority officers collecting marine fees berth-side.</p>
+
+    <div class="case-meta" style="grid-template-columns:repeat(3,1fr);">
+      <div class="meta-item">
+        <div class="meta-label">Role</div>
+        <div class="meta-value">Business &amp; System Analyst / UX-UI Design</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Platform</div>
+        <div class="meta-value">Android — SUNMI P3H &amp; Besteron devices</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Deliverables</div>
+        <div class="meta-value">Requirements, business rules, IA, UI system</div>
+      </div>
+    </div>
+
+    <div class="case-block">
+      <h3>Summary</h3>
+      <p>Port authority officers collect a wide range of marine fees — mooring, dry berth, waste collection, water/electricity, towing, national park entry tickets — directly at the berth instead of sending skippers to a fixed cash desk. Pricing depends on vessel length, which varies by service and by length band. This app works out the correct price automatically, based on one number, instead of leaving that calculation to the officer.</p>
+    </div>
+
+    <div class="case-block">
+      <h3>The problem</h3>
+      <p>Pricing for marine fees isn't a flat rate — it depends on vessel length. Mooring, national park tickets, and other services each apply differently depending on how long the vessel is, so before an officer can charge the right price, they first need to know the vessel's length and which pricing band it falls into. Working that out by hand, for every transaction, at the berth, is slow and easy to get wrong.</p>
+    </div>
+
+    <div class="hmw">
+      <div class="hmw-eyebrow">The core design decision</div>
+      <p class="hmw-question">The officer identifies a vessel first — and only then does the system reveal which services apply and at what price. The officer chooses a service, never a tariff.</p>
+    </div>
+
+    <div class="case-block">
+      <h3>Users &amp; constraints</h3>
+      <ul>
+        <li><strong>Primary user</strong> — port officer working at the berth</li>
+        <li><strong>Environment</strong> — outdoors, direct sunlight, wind, sea spray</li>
+        <li><strong>Load</strong> — dozens of transactions per shift in peak season</li>
+        <li><strong>Constraints</strong> — one-handed use, unreliable mobile coverage</li>
+      </ul>
+      <p>These constraints drove nearly every interface decision: large touch targets, high-contrast surfaces for outdoor legibility, primary actions anchored in the thumb zone above the Android system navigation bar, and a design that assumes offline is the normal condition, not an error state.</p>
+    </div>
+
+    <div class="case-block">
+      <h3>Design system</h3>
+      <p>The visual language went through several iterations before landing on something that felt right for a single-purpose industrial device rather than a generic consumer app: a light, high-contrast working surface — rather than a dark "hero" theme that looks good in a pitch deck but is hard to read in direct sun — one confident accent colour reserved for primary actions, and plain system typography for maximum legibility rather than a decorative display font. Green and amber are reserved strictly for status semantics (synced/online vs. offline/pending) so they never compete visually with the primary action colour.</p>
+      <p>Every screen shares the same chrome: an Android status bar, a system navigation bar, and a consistent app-bar pattern (back arrow, title, overflow menu where relevant) — so the interface behaves the way the underlying device already behaves, rather than fighting the platform.</p>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="swatch-color" style="background:#2F80ED;"></div>
+          <div class="swatch-name">Primary action</div>
+          <div class="swatch-hex">#2F80ED</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#FFFFFF; border-color:#333;"></div>
+          <div class="swatch-name">Working surface</div>
+          <div class="swatch-hex">#FFFFFF</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#1A1A1A;"></div>
+          <div class="swatch-name">Ink / text</div>
+          <div class="swatch-hex">#1A1A1A</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#2E8B57;"></div>
+          <div class="swatch-name">Success / synced</div>
+          <div class="swatch-hex">#2E8B57</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#E8A33D;"></div>
+          <div class="swatch-name">Warning / offline</div>
+          <div class="swatch-hex">#E8A33D</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mosaic-label">Landing</div>
+    <div class="shot single-phone">
+      <img src="mockups/mblagajna/g-landing.png" alt="Landing screen with logo and tagline" onclick="openLightbox('mockups/mblagajna/g-landing.png')">
+      <p class="shot-caption">Splash screen</p>
+    </div>
+
+    <div class="mosaic-label">Login</div>
+    <div class="shot">
+      <img src="mockups/mblagajna/g-login.png" alt="Login screen and offline login state" onclick="openLightbox('mockups/mblagajna/g-login.png')">
+      <p class="shot-caption">Login — normal and offline state</p>
+    </div>
+
+    <div class="mosaic-label">Main menu</div>
+    <div class="shot single-phone">
+      <img src="mockups/mblagajna/g-main-menu.png" alt="Main menu with New invoice promoted as primary action" onclick="openLightbox('mockups/mblagajna/g-main-menu.png')">
+      <p class="shot-caption">"New invoice" promoted first</p>
+    </div>
+
+    <div class="case-block">
+      <h3>Starting a new invoice</h3>
+      <p>Creating a new invoice starts with a list of vessels — registered ones the officer has served before, plus two general options for unregistered vessels. Picking a registered vessel goes straight to service selection, since its length is already on file. Picking a general vessel stops first at a length entry screen — that number is what unlocks the correct services and prices on the next screen.</p>
+    </div>
+
+    <div class="mosaic-label">Vessel selection &amp; length entry</div>
+    <div class="shot">
+      <img src="mockups/mblagajna/g-vessel-length.png" alt="Vessel selection list and length entry screen" onclick="openLightbox('mockups/mblagajna/g-vessel-length.png')">
+      <p class="shot-caption">Vessel selection, length entry</p>
+    </div>
+
+    <div class="case-block">
+      <h3>The core screen</h3>
+      <p>Once a length is known, only the tariffs that apply to that length band are offered. Categories sit in a grid that's fully visible without scrolling — even as the real tariff catalogue grows — and tapping one filters straight to its articles. Real ERP article codes (e.g. <em>Berthing fee</em> — M18, <em>Berthing fee cancellation</em> — M17) are used throughout rather than placeholder labels, so the prototype reads as the actual system rather than a mock-up.</p>
+    </div>
+
+    <div class="mosaic-label">Service selection</div>
+    <div class="shot single-phone">
+      <img src="mockups/mblagajna/g-service-selection.png" alt="Service selection screen filtered by vessel length" onclick="openLightbox('mockups/mblagajna/g-service-selection.png')">
+      <p class="shot-caption">Tariffs filtered by length</p>
+    </div>
+
+    <div class="mosaic-label">Document lines &amp; payment</div>
+    <div class="shot">
+      <img src="mockups/mblagajna/g-lines-payment.png" alt="Document lines receipt and payment screen" onclick="openLightbox('mockups/mblagajna/g-lines-payment.png')">
+      <p class="shot-caption">Receipt lines &amp; payment</p>
+    </div>
+
+    <div class="mosaic-label">Partners register</div>
+    <div class="shot single-phone">
+      <img src="mockups/mblagajna/g-partners.png" alt="Partners register list" onclick="openLightbox('mockups/mblagajna/g-partners.png')">
+      <p class="shot-caption">Partners register</p>
+    </div>
+
+    <div class="case-block">
+      <h3>R1 invoice — partner lookup</h3>
+      <p>Tax ID is the lookup key. A match auto-fills the buyer's details; no match offers a direct path to register a new partner on the spot, which then syncs back to the ERP.</p>
+    </div>
+
+    <div class="mosaic-label">R1 lookup states</div>
+    <div class="shot">
+      <img src="mockups/mblagajna/g-r1.png" alt="R1 invoice lookup — empty, found, and not found states" onclick="openLightbox('mockups/mblagajna/g-r1.png')">
+      <p class="shot-caption">Three lookup states</p>
+    </div>
+
+    <div class="mosaic-label">New partner &amp; new vessel</div>
+    <div class="shot">
+      <img src="mockups/mblagajna/g-new-partner-vessel.png" alt="New partner and new vessel forms" onclick="openLightbox('mockups/mblagajna/g-new-partner-vessel.png')">
+      <p class="shot-caption">New partner &amp; vessel forms</p>
+    </div>
+
+    <div class="mosaic-label">Confirmation &amp; archive</div>
+    <div class="shot">
+      <img src="mockups/mblagajna/g-confirmation-archive.png" alt="Payment confirmation and document archive" onclick="openLightbox('mockups/mblagajna/g-confirmation-archive.png')">
+      <p class="shot-caption">Confirmation &amp; archive</p>
+    </div>
+
+    <div class="case-block">
+      <h3>Credit note (storno)</h3>
+      <p>Reversing a document is treated with the weight it deserves: an explicit confirmation step, and — for card payments — a hard requirement that the customer's physical card be presented again before the refund can complete.</p>
+    </div>
+
+    <div class="mosaic-label">Storno confirmation</div>
+    <div class="shot single-phone">
+      <img src="mockups/mblagajna/g-storno.png" alt="Credit note storno confirmation screen" onclick="openLightbox('mockups/mblagajna/g-storno.png')">
+      <p class="shot-caption">Storno confirmation</p>
+    </div>
+
+    <div class="case-block">
+      <h3>Key business rules encoded in the interface</h3>
+      <ul>
+        <li>Vessel length is the single key that unlocks pricing — the officer never picks a tariff band manually</li>
+        <li>A vessel can be identified from the register or as a general vessel with a manually entered length, validated against implausible values</li>
+        <li>Linked articles are added automatically and can't be removed independently of their parent line</li>
+        <li>A payment method is mandatory before a document can be completed</li>
+        <li>Every document is fiscalised; if fiscalisation fails, the document is retried, never lost</li>
+        <li>Documents are never deleted — a reversal always creates a new, linked document, and the original remains visible</li>
+        <li>Card refunds require the physical card to be re-presented</li>
+        <li>Every core function works fully offline; synchronisation happens in the background or on demand, never as a blocker</li>
+      </ul>
+    </div>
+
+    <div class="case-block">
+      <h3>Outcome</h3>
+      <p>An officer can now serve one vessel after another without breaking stride — pick it from the list, choose a service, take payment, done. Getting the price right is no longer something they have to stop and work out.</p>
+    </div>
+    <div class="case-block" style="padding-top:80px; border-top:1px solid var(--line); margin-top:20px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px;">
+      <a href="index.html#work" class="back-link" style="margin-bottom:0;">← All work</a>
+      <a href="msalesrep.html" class="back-link" style="margin-bottom:0;">Next project: mSalesRep →</a>
+    </div>
+  </div>
+</main>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close">Close ✕</span>
+  <img id="lightbox-img" src="" alt="Full screenshot">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

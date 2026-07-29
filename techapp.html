@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechApp — Lorena Sostar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="logo"><a href="index.html">Lorena Sostar</a></div>
+    <nav>
+      <ul>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap case-hero">
+    <a href="index.html#work" class="back-link">← All work</a>
+    <div class="case-eyebrow">04 — Field Service / Vending Management</div>
+    <h1 class="case-title">TechApp</h1>
+    <p class="case-tagline">Unifying two field-service tools into one app for technicians who fill and service vending machines — built at Intis for Televend, a platform for day-to-day vending and self-service operations.</p>
+
+    <div class="case-meta">
+      <div class="meta-item">
+        <div class="meta-label">Role</div>
+        <div class="meta-value">End-to-end UX/UI redesign</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Collaborators</div>
+        <div class="meta-value">Stakeholders, BA, developers</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Platform</div>
+        <div class="meta-value">Android, field technicians</div>
+      </div>
+    </div>
+
+    <div class="case-block">
+      <h3>Summary</h3>
+      <p>Field technicians who filled and serviced vending machines had to work across two completely separate apps — one for restocking machines, another for technical service and repairs — even though it was usually the same person doing both jobs on the same route. Switching between apps mid-shift slowed people down and made simple tasks feel unnecessarily complicated.</p>
+    </div>
+
+    <div class="case-block">
+      <h3>The problem</h3>
+      <ul>
+        <li>Two disconnected tools for one continuous workflow</li>
+        <li>Duplicated navigation, duplicated login, duplicated machine data</li>
+        <li>No single view of a technician's day — routes, machines, repairs, restocking scattered across apps</li>
+      </ul>
+    </div>
+
+    <div class="hmw">
+      <div class="hmw-eyebrow">How might we</div>
+      <p class="hmw-question">let one technician handle both restocking and repairs on the same route, without ever switching apps mid-shift?</p>
+    </div>
+
+    <div class="case-block">
+      <h3>Visual direction</h3>
+      <p>The navy-and-red palette isn't arbitrary — it's Televend's own brand identity, carried through from splash screen to every action button, which helped the merged app feel like one coherent, official tool rather than a patchwork of the two it replaced.</p>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="swatch-color" style="background:#B1362F;"></div>
+          <div class="swatch-name">Intis red (before)</div>
+          <div class="swatch-hex">#B1362F</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#141D33;"></div>
+          <div class="swatch-name">Televend navy</div>
+          <div class="swatch-hex">#141D33</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#16A04F;"></div>
+          <div class="swatch-name">Action green</div>
+          <div class="swatch-hex">#16A04F</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#F5F5F5; border-color:#333;"></div>
+          <div class="swatch-name">Surface</div>
+          <div class="swatch-hex">#F5F5F5</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-block">
+      <h3>Before</h3>
+      <p>The original app was function-first but visually dense — a dark red header, dense text-based lists, and multi-step modals for simple inventory updates.</p>
+    </div>
+
+    <div class="mosaic-label">Before — original app</div>
+    <div class="shot">
+      <img src="mockups/techapp/before-1.png" alt="Home menu, routes list and route detail on the original app" onclick="openLightbox('mockups/techapp/before-1.png')">
+      <p class="shot-caption">Home, routes, route detail</p>
+    </div>
+    <div class="shot">
+      <img src="mockups/techapp/before-2.png" alt="Machine details and inventory fill on the original app" onclick="openLightbox('mockups/techapp/before-2.png')">
+      <p class="shot-caption">Machine details, inventory fill</p>
+    </div>
+
+    <div class="case-block">
+      <h3>My role</h3>
+      <p>I led the full redesign end-to-end: running discovery conversations with stakeholders and the business analyst, translating requirements into flows and wireframes, and working closely with developers through implementation to make sure the design held up technically.</p>
+    </div>
+
+    <div class="case-block">
+      <h3>Designing for the real user</h3>
+      <p>The people using this app aren't always comfortable with technology, and many don't share the same first language as the interface. That shaped almost every decision:</p>
+      <ul>
+        <li>Large, high-contrast buttons that are easy to tap without precision</li>
+        <li>Short, keyword-style labels instead of full sentences — "Start driving," "Call," "Pick up" — so meaning comes through even with limited language proficiency</li>
+        <li>Icons paired with every label, never icons alone, so the app can be understood at a glance</li>
+        <li>A flat, task-first home screen instead of nested menus — one tap to the thing you need</li>
+        <li>Clear status states built with color and simple progress bars, so technicians always know where they stand without reading dense text</li>
+      </ul>
+    </div>
+
+    <div class="mosaic-label">After — unified TechApp</div>
+    <div class="shot">
+      <img src="mockups/techapp/entry.png" alt="Splash screen, login screen and location permission" onclick="openLightbox('mockups/techapp/entry.png')">
+      <p class="shot-caption">Splash, sign in, location permission</p>
+    </div>
+    <div class="shot">
+      <img src="mockups/techapp/home.png" alt="Home screen, repair status and empty state" onclick="openLightbox('mockups/techapp/home.png')">
+      <p class="shot-caption">No active routes, home, repair status</p>
+    </div>
+    <div class="shot">
+      <img src="mockups/techapp/after-2.png" alt="Routes timeline, progress and empty state" onclick="openLightbox('mockups/techapp/after-2.png')">
+      <p class="shot-caption">Timeline, progress, empty state</p>
+    </div>
+    <div class="shot">
+      <img src="mockups/techapp/after-3.png" alt="Machine modal, barcode scan and manual barcode entry" onclick="openLightbox('mockups/techapp/after-3.png')">
+      <p class="shot-caption">Machine modal, scan, entry</p>
+    </div>
+
+    <div class="case-block">
+      <h3>Outcome</h3>
+      <p>The result is a single app that follows the technician's actual day: check the route, drive, service or restock a machine, log it, move on — with the timeline view, machine detail modals, and repair-progress states all living in one consistent system instead of two disconnected ones.</p>
+    </div>
+    <div class="case-block" style="padding-top:80px; border-top:1px solid var(--line); margin-top:20px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px;">
+      <a href="fitsphere.html" class="back-link" style="margin-bottom:0;">← Previous project: FitSphereVR</a>
+      <a href="castles.html" class="back-link" style="margin-bottom:0;">Next project: Castles of Northern Croatia →</a>
+    </div>
+  </div>
+</main>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close">Close ✕</span>
+  <img id="lightbox-img" src="" alt="Full screenshot">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

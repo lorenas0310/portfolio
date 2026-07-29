@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timely — Lorena Sostar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="logo"><a href="index.html">Lorena Sostar</a></div>
+    <nav>
+      <ul>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap case-hero">
+    <a href="index.html#work" class="back-link">← All work</a>
+    <div class="case-eyebrow">06 — Time Tracking / University of Oulu</div>
+    <h1 class="case-title">Timely</h1>
+    <p class="case-tagline">A time-tracking app for teams and freelancers, designed for a UX Design and Management course at the University of Oulu — grounded in real interviews, not assumptions.</p>
+
+    <div class="case-meta">
+      <div class="meta-item">
+        <div class="meta-label">Role</div>
+        <div class="meta-value">UX research &amp; UI design</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Method</div>
+        <div class="meta-value">Interviews, observations, personas, wireframes, prototype</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Platform</div>
+        <div class="meta-value">Mobile, dark theme</div>
+      </div>
+    </div>
+
+    <div class="case-block">
+      <h3>Summary</h3>
+      <p>Time tracking apps let people log how much time they spend on tasks or projects — useful for companies monitoring productivity, freelancers proving billable hours, and students juggling group work. I designed Timely, as a paired course project, to serve all three groups without feeling like enterprise software.</p>
+    </div>
+
+    <div class="hmw">
+      <div class="hmw-eyebrow">How might we</div>
+      <p class="hmw-question">give people juggling several projects one honest place to see what's due, what's done, and where their time actually went?</p>
+    </div>
+
+    <div class="case-block">
+      <h3>Visual direction</h3>
+      <p>Interviewees were explicit that dark mode should stay — easier on the eyes for something checked repeatedly through a workday. Against the near-black background, three accent colors carry meaning rather than decoration: coral red for primary actions and alerts, mint green for positive status and profile highlights, and soft orange for secondary detail — keeping the palette small enough that color itself becomes a wayfinding signal.</p>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="swatch-color" style="background:#333132;"></div>
+          <div class="swatch-name">Background</div>
+          <div class="swatch-hex">#333132</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#FE5F55;"></div>
+          <div class="swatch-name">Coral</div>
+          <div class="swatch-hex">#FE5F55</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#C7EFCF;"></div>
+          <div class="swatch-name">Mint</div>
+          <div class="swatch-hex">#C7EFCF</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#F0B67F;"></div>
+          <div class="swatch-name">Orange</div>
+          <div class="swatch-hex">#F0B67F</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-block">
+      <h3>Talking to real users first</h3>
+      <p>Before any screen existed, we ran five 30-minute interviews across our three target groups — IT employees, freelancers, and students — to understand how they currently manage projects and track time.</p>
+      <ul>
+        <li>Every interviewee had already used some project-management tool, which made our app's core metaphors (calendar for dates, paperclip for attachments, plus button for adding things) instantly familiar</li>
+        <li>Freelancers and employees cared most about accurate time tracking, since it affects how fairly they get paid; students cared more about deadlines than time logs</li>
+      </ul>
+    </div>
+
+    <div class="case-block">
+      <h3>From persona to product</h3>
+      <p>We built a persona — Matti Heikkinen, a software developer in Helsinki juggling several projects across his laptop, Google Drive, and Trello — to keep design decisions anchored in a specific person's frustrations rather than an abstract user. Matti's goal was simple: one place for every project and task, instead of three disconnected tools.</p>
+      <p>From there we mapped a task flow, then deliberately built grayscale wireframes before any color entered the picture — keeping early decisions about structure and flow separate from visual polish, so usability problems couldn't hide behind good looks. Only once the wireframes and flow held up did we move into the visual design and build a working prototype.</p>
+    </div>
+
+    <div class="mosaic-label">Entry &amp; home</div>
+    <div class="shot">
+      <img src="mockups/timely/entry.png" alt="App opening screen, login, home and notifications" onclick="openLightbox('mockups/timely/entry.png')">
+      <p class="shot-caption">Entry &amp; home</p>
+    </div>
+
+    <div class="case-block">
+      <h3>Keeping projects, tasks and time in view</h3>
+      <p>The calendar answers "what's due," the task screen answers "what's the status," and the profile screen keeps someone's own workload — active projects, delivered work, current status — visible at a glance. None of these compete for attention; each answers one question.</p>
+    </div>
+
+    <div class="mosaic-label">Calendar, tasks &amp; profile</div>
+    <div class="shot">
+      <img src="mockups/timely/calendar-task.png" alt="Calendar day view, month view and task overview" onclick="openLightbox('mockups/timely/calendar-task.png')">
+      <p class="shot-caption">Calendar &amp; task overview</p>
+    </div>
+    <div class="shot">
+      <img src="mockups/timely/comments-profile.png" alt="Task comments and profile screen" onclick="openLightbox('mockups/timely/comments-profile.png')">
+      <p class="shot-caption">Comments &amp; profile</p>
+    </div>
+
+    <div class="case-block">
+      <h3>Testing the prototype</h3>
+      <p>With a working prototype in hand, we went back to the same three people from the initial interviews for observation sessions — watching them complete specific tasks (signing up, creating a project, tracking time, commenting on a task) without any guidance from us, so we could see where the design itself did or didn't communicate.</p>
+    </div>
+
+    <div class="stat-callout">
+      <div class="stat-number">3/3</div>
+      <p class="stat-desc">observation participants completed every task — sign up, create a project, track time, check the calendar — without any help from us, confirming the navigation and structure decided back at the wireframe stage actually held up.</p>
+    </div>
+
+    <div class="case-block">
+      <h3>Outcome</h3>
+      <p>Every observation participant completed every task — sign up, create a project, create a task, track time, check the calendar — without assistance, validating the navigation and flow decisions made back at the wireframe stage.</p>
+    </div>
+    <div class="case-block" style="padding-top:80px; border-top:1px solid var(--line); margin-top:20px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px;">
+      <a href="castles.html" class="back-link" style="margin-bottom:0;">← Previous project: Castles</a>
+      <a href="index.html#work" class="back-link" style="margin-bottom:0;">All work →</a>
+    </div>
+  </div>
+</main>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close">Close ✕</span>
+  <img id="lightbox-img" src="" alt="Full screenshot">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
