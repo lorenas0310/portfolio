@@ -88,6 +88,22 @@
   .foot{padding:80px 0 100px; border-top:1px solid var(--line); transition:border-color .8s;}
   .foot h3{font-family:var(--serif); font-weight:500; font-size:clamp(26px,3.4vw,40px); margin-bottom:20px;}
   .foot a{font-size:17px; border-bottom:1px solid currentColor; padding-bottom:2px;}
+
+  /* about */
+  .about{padding:20px 0 90px;}
+  .about-grid{display:grid; grid-template-columns:220px 1fr; gap:56px; align-items:start;}
+  .about-photo{width:220px; height:272px; border-radius:14px; overflow:hidden; flex-shrink:0;}
+  .about-photo img{width:100%; height:100%; object-fit:cover; display:block;}
+  .about-text p{font-size:17px; line-height:1.7; color:var(--text-muted); max-width:58ch; margin-bottom:18px;}
+  .about-text p:last-of-type{margin-bottom:0;}
+  .about-links{margin-top:24px; display:flex; gap:22px;}
+  .about-links a{font-size:13px; letter-spacing:.03em; border-bottom:1px solid var(--text-faint);}
+  .about-links a:hover{border-color:var(--accent);}
+
+  @media (max-width:640px){
+    .about-grid{grid-template-columns:1fr; gap:26px;}
+    .about-photo{width:150px; height:186px;}
+  }
 </style>
 </head>
 <body>
@@ -102,11 +118,26 @@
   </div></header>
 
   <main>
-    <section class="hero" id="about"><div class="wrap">
+    <section class="hero"><div class="wrap">
       <div class="eyebrow">Business Analyst · UX/UI Designer</div>
       <h1 id="ht"><span class="ln"><span>From requirements to</span></span><span class="ln"><span><em>real interfaces</em>.</span></span></h1>
       <p class="sub muted">I turn stakeholder needs into products people actually use.</p>
       <div class="scrollhint muted">Scroll <i>↓</i></div>
+    </div></section>
+
+    <section class="about" id="about"><div class="wrap">
+      <div class="wh"><div class="t">About</div><h2>Who I am</h2></div>
+      <div class="about-grid">
+        <div class="about-photo"><img src="images/lorena.png" alt="Portrait of Lorena Sostar"></div>
+        <div class="about-text">
+          <p>I'm Lorena, a designer working at the intersection of business analysis and UX/UI. I work across ERP, web, and mobile products — gathering real requirements from stakeholders and users, then designing the interfaces that make those requirements usable, not just documented.</p>
+          <p>That perspective shapes how I approach every project: talking directly with the people who'll use the product, mapping the real workflow before touching a single pixel, and designing interfaces that developers can actually build and non-technical users can actually understand.</p>
+          <div class="about-links">
+            <a href="mailto:lsostar0310@gmail.com" class="hoverable">lsostar0310@gmail.com</a>
+            <a href="https://www.linkedin.com/in/lorenasostar/" class="hoverable" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
     </div></section>
 
     <section class="work" id="work"><div class="wrap">
