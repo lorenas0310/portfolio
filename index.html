@@ -74,7 +74,7 @@
   .row:hover .nm{color:var(--c);}
   .row .nm{transition:color .4s ease;}
   .row .n{font-family:var(--serif); font-size:14px; color:var(--text-faint); width:34px; flex-shrink:0; transition:color .8s;}
-  .row .nm{font-family:var(--serif); font-weight:500; font-size:clamp(26px,4vw,50px); line-height:1.05; letter-spacing:-.01em; min-width:0;}
+  .row .nm{font-family:var(--serif); font-weight:500; font-size:clamp(22px,3vw,38px); line-height:1.1; letter-spacing:-.01em; min-width:0; white-space:nowrap;}
   .row .ct{margin-left:auto; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:#4a4740; flex-shrink:0; transition:color .8s, transform .5s cubic-bezier(.16,1,.3,1);}
   .row:hover .ct{transform:translateX(-12px);}
   .row .ar{margin-left:18px; font-size:22px; opacity:0; transform:translateX(-14px); transition:opacity .45s, transform .45s cubic-bezier(.16,1,.3,1); flex-shrink:0;}
@@ -93,20 +93,33 @@
   /* about */
   .about{padding:20px 0 90px;}
   .about-grid{display:grid; grid-template-columns:220px 1fr; gap:56px; align-items:start;}
-  .about-photo{width:220px; height:272px; border-radius:14px; overflow:hidden; flex-shrink:0;}
-  .about-photo img{width:100%; height:100%; object-fit:cover; display:block;}
+  .about-photo{
+    width:220px; height:272px; border-radius:14px; overflow:hidden; flex-shrink:0;
+    transition:transform .5s cubic-bezier(.16,1,.3,1), box-shadow .5s cubic-bezier(.16,1,.3,1);
+    box-shadow:0 14px 34px rgba(26,26,26,.08);
+  }
+  .about-photo:hover{transform:translateY(-6px) rotate(-1deg); box-shadow:0 22px 44px rgba(26,26,26,.16);}
+  .about-photo img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .6s cubic-bezier(.16,1,.3,1);}
+  .about-photo:hover img{transform:scale(1.06);}
   .about-text p{font-size:17px; line-height:1.7; color:var(--text-muted); max-width:58ch; margin-bottom:18px;}
   .about-text p:last-of-type{margin-bottom:0;}
   .about-links{margin-top:24px; display:flex; gap:22px;}
-  .about-links a{font-size:13px; letter-spacing:.03em; border-bottom:1px solid var(--text-faint);}
-  .about-links a:hover{border-color:var(--accent);}
+  .about-links a{font-size:13px; letter-spacing:.03em; border-bottom:1px solid var(--text-faint); transition:border-color .3s ease, color .3s ease, transform .3s ease; display:inline-block;}
+  .about-links a:hover{border-color:var(--accent); transform:translateY(-2px);}
+
+  .reveal{opacity:0; transform:translateY(28px); transition:opacity .85s cubic-bezier(.16,1,.3,1), transform .85s cubic-bezier(.16,1,.3,1);}
+  .reveal.in{opacity:1; transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1; transform:none; transition:none;}
+    .about-photo, .about-photo img{transition:none;}
+  }
 
   @media (max-width:640px){
     .wrap{padding:0 20px;}
     header .wrap{padding:0 20px;}
     nav ul{gap:14px;}
     nav a{font-size:10.5px;letter-spacing:.06em;}
-    .hero{padding-top:96px; min-height:auto; padding-bottom:40px;}
+    .hero{padding-top:96px; min-height:100vh; min-height:100svh; padding-bottom:40px;}
     .hero .sub{font-size:16px;}
 
     .about-grid{grid-template-columns:1fr; gap:26px;}
@@ -115,7 +128,7 @@
     .row{gap:12px; padding:24px 0 40px; flex-wrap:wrap;}
     .row .ct{display:none;}
     .row .ar{display:none;}
-    .row .nm{font-size:clamp(24px,8vw,32px); flex:1 1 auto;}
+    .row .nm{font-size:clamp(17px,5.2vw,22px); flex:1 1 auto; white-space:nowrap;}
     .row .ds{display:none;}
   }
 </style>
@@ -140,13 +153,13 @@
     </div></section>
 
     <section class="about" id="about"><div class="wrap">
-      <div class="wh"><div class="t">About</div><h2>Who I am</h2></div>
+      <div class="wh reveal"><div class="t">About</div><h2>Who I am</h2></div>
       <div class="about-grid">
-        <div class="about-photo"><img src="images/lorena.png" alt="Portrait of Lorena Sostar"></div>
+        <div class="about-photo reveal" style="transition-delay:.1s;"><img src="images/lorena.png" alt="Portrait of Lorena Sostar"></div>
         <div class="about-text">
-          <p>I'm Lorena, a designer working at the intersection of business analysis and UX/UI. I work across ERP, web, and mobile products — gathering real requirements from stakeholders and users, then designing the interfaces that make those requirements usable, not just documented.</p>
-          <p>That perspective shapes how I approach every project: talking directly with the people who'll use the product, mapping the real workflow before touching a single pixel, and designing interfaces that developers can actually build and non-technical users can actually understand.</p>
-          <div class="about-links">
+          <p class="reveal" style="transition-delay:.2s;">I'm Lorena, a designer working at the intersection of business analysis and UX/UI. I work across ERP, web, and mobile products — gathering real requirements from stakeholders and users, then designing the interfaces that make those requirements usable, not just documented.</p>
+          <p class="reveal" style="transition-delay:.32s;">That perspective shapes how I approach every project: talking directly with the people who'll use the product, mapping the real workflow before touching a single pixel, and designing interfaces that developers can actually build and non-technical users can actually understand.</p>
+          <div class="about-links reveal" style="transition-delay:.44s;">
             <a href="mailto:lsostar0310@gmail.com" class="hoverable">lsostar0310@gmail.com</a>
             <a href="https://www.linkedin.com/in/lorenasostar/" class="hoverable" target="_blank" rel="noopener">LinkedIn</a>
           </div>
@@ -200,6 +213,21 @@ document.querySelectorAll('.hero h1 .ln > span').forEach((s,i)=>{ s.style.animat
 
 const hdr=document.querySelector('header');
 addEventListener('scroll',()=>hdr.classList.toggle('on', scrollY>18));
+
+const revealEls = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.15, rootMargin: '0px 0px -40px 0px'});
+  revealEls.forEach(el => io.observe(el));
+} else {
+  revealEls.forEach(el => el.classList.add('in'));
+}
 </script>
 </body>
 </html>
