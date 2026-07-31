@@ -51,6 +51,18 @@ nav a:hover{color:var(--text);}
 .hero .sub{margin-top:28px;font-size:18px;color:var(--text-muted);max-width:46ch;font-weight:300;}
 .hero .scroll-cue{margin-top:56px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-faint);}
 
+@media (max-width:640px){
+  .wrap{padding:0 20px;}
+  .wrap-narrow{padding:0 20px;}
+  header .wrap{padding:0 20px;}
+  nav ul{gap:14px;}
+  nav a{font-size:10.5px;letter-spacing:.06em;}
+  section{padding:64px 0;}
+  .hero{min-height:auto;padding-top:96px;padding-bottom:40px;}
+  .hero .sub{font-size:16px;}
+  .case-hero{padding-top:110px;padding-bottom:40px;}
+}
+
 /* ---------- SECTIONS ---------- */
 section{padding:110px 0;border-top:1px solid var(--line);}
 .section-label{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;}
@@ -142,7 +154,7 @@ footer{padding:36px 0 56px;font-size:13px;color:var(--text-faint);display:flex;j
 /* =========================================================
    CASE STUDY PAGE
    ========================================================= */
-.case-hero{padding:130px 0 60px;border-top:none;}
+.case-hero{padding-top:130px;padding-bottom:60px;border-top:none;}
 .back-link{
   display:inline-flex;align-items:center;gap:8px;
   font-size:13px;letter-spacing:.05em;text-transform:uppercase;
