@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Castles of Northern Croatia — Lorena Sostar</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style-light.css">
 </head>
-<body style="--accent:#c9a24b;">
+<body style="--accent:#a8842f;">
+<div class="blobs"><span class="blob bl1"></span><span class="blob bl2"></span><span class="blob bl3"></span></div>
 
 <header>
   <div class="wrap">
@@ -107,57 +108,57 @@
 
     <div class="mosaic-label">Homepage</div>
     <div class="shot">
-      <img src="mockups/castles/home-hero-stats.png" alt="Homepage hero with castle photo, title and heritage stats" onclick="openLightbox('mockups/castles/home-hero-stats.png')">
+      <img src="mockups-light/castles/home-hero-stats.png" alt="Homepage hero with castle photo, title and heritage stats" onclick="openLightbox('mockups-light/castles/home-hero-stats.png')">
       <p class="shot-caption">Homepage</p>
     </div>
     <div class="shot">
-      <img src="mockups/castles/steps.png" alt="Explore, visit, win steps section" onclick="openLightbox('mockups/castles/steps.png')">
+      <img src="mockups-light/castles/steps.png" alt="Explore, visit, win steps section" onclick="openLightbox('mockups-light/castles/steps.png')">
       <p class="shot-caption">How it works</p>
     </div>
     <div class="shot">
-      <img src="mockups/castles/carousel.png" alt="Featured castles carousel" onclick="openLightbox('mockups/castles/carousel.png')">
+      <img src="mockups-light/castles/carousel.png" alt="Featured castles carousel" onclick="openLightbox('mockups-light/castles/carousel.png')">
       <p class="shot-caption">Featured sites</p>
     </div>
     <div class="shot">
-      <img src="mockups/castles/community-photos.png" alt="Community photo gallery on homepage" onclick="openLightbox('mockups/castles/community-photos.png')">
+      <img src="mockups-light/castles/community-photos.png" alt="Community photo gallery on homepage" onclick="openLightbox('mockups-light/castles/community-photos.png')">
       <p class="shot-caption">Community photos</p>
     </div>
 
     <div class="mosaic-label">Site detail</div>
     <div class="shot">
-      <img src="mockups/castles/detail-hero.png" alt="Castle detail page hero and title" onclick="openLightbox('mockups/castles/detail-hero.png')">
+      <img src="mockups-light/castles/detail-hero.png" alt="Castle detail page hero and title" onclick="openLightbox('mockups-light/castles/detail-hero.png')">
       <p class="shot-caption">Site detail — intro</p>
     </div>
     <div class="shot">
-      <img src="mockups/castles/detail-secondary.png" alt="Location map, reviews and nearby events for the site" onclick="openLightbox('mockups/castles/detail-secondary.png')">
+      <img src="mockups-light/castles/detail-secondary.png" alt="Location map, reviews and nearby events for the site" onclick="openLightbox('mockups-light/castles/detail-secondary.png')">
       <p class="shot-caption">Location, reviews &amp; events</p>
     </div>
     <div class="shot">
-      <img src="mockups/castles/site-gallery.png" alt="Site detail photo gallery" onclick="openLightbox('mockups/castles/site-gallery.png')">
+      <img src="mockups-light/castles/site-gallery.png" alt="Site detail photo gallery" onclick="openLightbox('mockups-light/castles/site-gallery.png')">
       <p class="shot-caption">Site gallery</p>
     </div>
 
     <div class="mosaic-label">Plan a trip</div>
     <div class="shot">
-      <img src="mockups/castles/map-filters.png" alt="Map explorer with filters and location pins" onclick="openLightbox('mockups/castles/map-filters.png')">
+      <img src="mockups-light/castles/map-filters.png" alt="Map explorer with filters and location pins" onclick="openLightbox('mockups-light/castles/map-filters.png')">
       <p class="shot-caption">Filters &amp; map pins</p>
     </div>
     <div class="shot">
-      <img src="mockups/castles/route-map.png" alt="Route builder with map and ordered stops" onclick="openLightbox('mockups/castles/route-map.png')">
+      <img src="mockups-light/castles/route-map.png" alt="Route builder with map and ordered stops" onclick="openLightbox('mockups-light/castles/route-map.png')">
       <p class="shot-caption">Route builder</p>
     </div>
 
     <div class="mosaic-label">Save, track &amp; earn badges</div>
     <div class="shot">
-      <img src="mockups/castles/dashboard.png" alt="User dashboard with saved routes" onclick="openLightbox('mockups/castles/dashboard.png')">
+      <img src="mockups-light/castles/dashboard.png" alt="User dashboard with saved routes" onclick="openLightbox('mockups-light/castles/dashboard.png')">
       <p class="shot-caption">My routes</p>
     </div>
     <div class="shot">
-      <img src="mockups/castles/wishlist.png" alt="Wishlist of saved castles" onclick="openLightbox('mockups/castles/wishlist.png')">
+      <img src="mockups-light/castles/wishlist.png" alt="Wishlist of saved castles" onclick="openLightbox('mockups-light/castles/wishlist.png')">
       <p class="shot-caption">Wishlist</p>
     </div>
     <div class="shot">
-      <img src="mockups/castles/badges.png" alt="Badge collection screen" onclick="openLightbox('mockups/castles/badges.png')">
+      <img src="mockups-light/castles/badges.png" alt="Badge collection screen" onclick="openLightbox('mockups-light/castles/badges.png')">
       <p class="shot-caption">Badges</p>
     </div>
 
@@ -178,5 +179,6 @@
 </div>
 
 <script src="script.js"></script>
+<script>const hdr=document.querySelector('header');addEventListener('scroll',()=>hdr.classList.toggle('on',scrollY>18));</script>
 </body>
 </html>

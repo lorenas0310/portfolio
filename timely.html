@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Timely — Lorena Sostar</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style-light.css">
 </head>
-<body style="--accent:#e0685a;">
+<body style="--accent:#c2503f;">
+<div class="blobs"><span class="blob bl1"></span><span class="blob bl2"></span><span class="blob bl3"></span></div>
 
 <header>
   <div class="wrap">
@@ -97,7 +98,7 @@
 
     <div class="mosaic-label">Entry &amp; home</div>
     <div class="shot">
-      <img src="mockups/timely/entry.png" alt="App opening screen, login, home and notifications" onclick="openLightbox('mockups/timely/entry.png')">
+      <img src="mockups-light/timely/entry.png" alt="App opening screen, login, home and notifications" onclick="openLightbox('mockups-light/timely/entry.png')">
       <p class="shot-caption">Entry &amp; home</p>
     </div>
 
@@ -108,11 +109,11 @@
 
     <div class="mosaic-label">Calendar, tasks &amp; profile</div>
     <div class="shot">
-      <img src="mockups/timely/calendar-task.png" alt="Calendar day view, month view and task overview" onclick="openLightbox('mockups/timely/calendar-task.png')">
+      <img src="mockups-light/timely/calendar-task.png" alt="Calendar day view, month view and task overview" onclick="openLightbox('mockups-light/timely/calendar-task.png')">
       <p class="shot-caption">Calendar &amp; task overview</p>
     </div>
     <div class="shot">
-      <img src="mockups/timely/comments-profile.png" alt="Task comments and profile screen" onclick="openLightbox('mockups/timely/comments-profile.png')">
+      <img src="mockups-light/timely/comments-profile.png" alt="Task comments and profile screen" onclick="openLightbox('mockups-light/timely/comments-profile.png')">
       <p class="shot-caption">Comments &amp; profile</p>
     </div>
 
@@ -143,5 +144,6 @@
 </div>
 
 <script src="script.js"></script>
+<script>const hdr=document.querySelector('header');addEventListener('scroll',()=>hdr.classList.toggle('on',scrollY>18));</script>
 </body>
 </html>

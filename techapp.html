@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TechApp — Lorena Sostar</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style-light.css">
 </head>
 <body style="--accent:#b5654a;">
+<div class="blobs"><span class="blob bl1"></span><span class="blob bl2"></span><span class="blob bl3"></span></div>
 
 <header>
   <div class="wrap">
@@ -96,11 +97,11 @@
 
     <div class="mosaic-label">Before — original app</div>
     <div class="shot">
-      <img src="mockups/techapp/before-1.png" alt="Home menu, routes list and route detail on the original app" onclick="openLightbox('mockups/techapp/before-1.png')">
+      <img src="mockups-light/techapp/before-1.png" alt="Home menu, routes list and route detail on the original app" onclick="openLightbox('mockups-light/techapp/before-1.png')">
       <p class="shot-caption">Home, routes, route detail</p>
     </div>
     <div class="shot">
-      <img src="mockups/techapp/before-2.png" alt="Machine details and inventory fill on the original app" onclick="openLightbox('mockups/techapp/before-2.png')">
+      <img src="mockups-light/techapp/before-2.png" alt="Machine details and inventory fill on the original app" onclick="openLightbox('mockups-light/techapp/before-2.png')">
       <p class="shot-caption">Machine details, inventory fill</p>
     </div>
 
@@ -123,19 +124,19 @@
 
     <div class="mosaic-label">After — unified TechApp</div>
     <div class="shot">
-      <img src="mockups/techapp/entry.png" alt="Splash screen, login screen and location permission" onclick="openLightbox('mockups/techapp/entry.png')">
+      <img src="mockups-light/techapp/entry.png" alt="Splash screen, login screen and location permission" onclick="openLightbox('mockups-light/techapp/entry.png')">
       <p class="shot-caption">Splash, sign in, location permission</p>
     </div>
     <div class="shot">
-      <img src="mockups/techapp/home.png" alt="Home screen, repair status and empty state" onclick="openLightbox('mockups/techapp/home.png')">
+      <img src="mockups-light/techapp/home.png" alt="Home screen, repair status and empty state" onclick="openLightbox('mockups-light/techapp/home.png')">
       <p class="shot-caption">No active routes, home, repair status</p>
     </div>
     <div class="shot">
-      <img src="mockups/techapp/after-2.png" alt="Routes timeline, progress and empty state" onclick="openLightbox('mockups/techapp/after-2.png')">
+      <img src="mockups-light/techapp/after-2.png" alt="Routes timeline, progress and empty state" onclick="openLightbox('mockups-light/techapp/after-2.png')">
       <p class="shot-caption">Timeline, progress, empty state</p>
     </div>
     <div class="shot">
-      <img src="mockups/techapp/after-3.png" alt="Machine modal, barcode scan and manual barcode entry" onclick="openLightbox('mockups/techapp/after-3.png')">
+      <img src="mockups-light/techapp/after-3.png" alt="Machine modal, barcode scan and manual barcode entry" onclick="openLightbox('mockups-light/techapp/after-3.png')">
       <p class="shot-caption">Machine modal, scan, entry</p>
     </div>
 
@@ -156,5 +157,6 @@
 </div>
 
 <script src="script.js"></script>
+<script>const hdr=document.querySelector('header');addEventListener('scroll',()=>hdr.classList.toggle('on',scrollY>18));</script>
 </body>
 </html>
